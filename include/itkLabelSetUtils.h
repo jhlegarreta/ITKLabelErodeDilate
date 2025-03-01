@@ -476,7 +476,7 @@ doOneDimensionErode(TInIter &          inputIterator,
     iscale = imageScale;
   }
   const RealType  magnitude = (magnitudeSign * iscale * iscale) / (2.0 * sigma);
-  LineBufferType  lineBuf(lineLength);
+  LineBufferType  lineBuf(lineLength, 0.0);
   LabelBufferType labBuf(lineLength);
 
   inputIterator.SetDirection(direction);
